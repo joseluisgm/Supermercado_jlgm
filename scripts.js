@@ -1,6 +1,4 @@
 
-// poner el código para la solución aquí
-
 let cuenta = 0;
 let cola = 0;
 let libre = true;
@@ -70,22 +68,7 @@ function click_cliente(id) {
   }
 }
 
-document.getElementById("0").oncontextmenu = function (event) {
-  event.preventDefault();
-  click_quitar_cliente("0");
-};
-document.getElementById("1").oncontextmenu = function (event) {
-  event.preventDefault();
-  click_quitar_cliente("1");
-};
-document.getElementById("2").oncontextmenu = function (event) {
-  event.preventDefault();
-  click_quitar_cliente("2");
-};
-document.getElementById("3").oncontextmenu = function (event) {
-  event.preventDefault();
-  click_quitar_cliente("3");
-};
+
 
 function click_quitar_cliente(id) {
   console.log(cajasArray[id].cola);
