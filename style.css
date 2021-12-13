@@ -48,7 +48,8 @@ h1 {
   margin: 4%;
   width: 65%;
   height: 35%;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   border: 1px solid #ccc;
 }
 
