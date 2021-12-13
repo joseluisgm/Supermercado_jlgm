@@ -34,8 +34,8 @@ function cliente(nombre) {
     "uhr",
     "pujf",
     "ahrg",
-    "lol",
-    "josen´t",
+    "lol"
+   
   ];
   this.nombre = nombreClientes[Math.random() * nombreClientes - 1];
 }
@@ -69,6 +69,7 @@ function click_cliente(id) {
     }
   }
 }
+
 document.getElementById("0").oncontextmenu = function (event) {
   event.preventDefault();
   click_quitar_cliente("0");
