@@ -46,6 +46,10 @@ h1 {
 #zonaComando {
   background-color: var(--fondoComandos);
   margin: 4%;
+  width: 65%;
+  height: 35%;
+  overflow: scroll;
+  border: 1px solid #ccc;
 }
 
 .caja {
