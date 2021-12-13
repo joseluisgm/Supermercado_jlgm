@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!--
+Ejercicio de Ejemplo
+DWEC-UD2
+autor: jose luis gallardo
+ENUNCIADO:
+  Ir gradualmente mejorando, paso a paso, hasta llegar
+  donde mejor puedan o quieran. Lo importante es
+  superarse a ustedes mismos, e intentar ser el mejor si
+  se animan...
+  Iremos añadiendo elementos durante la clase.
+  INICIAL: crear el botón con leyenda COMENZAR que al
+  pincharlo pone en cada caja el mensaje: "cola: vacía"
+  paso 2
+-->
+
+  <head>
+    <title>Ejercicios Javascript</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+  </head>
+
+  <body>
+    <div id="fondoTodo" class="fondoDeTodo">
+
+      <div id="zonacabecera">
+        <h1>SUPERMERCADO</h1>
+      </div>
+      <div id="zonaboton"  class="btn-group">
+        <button
+          type="button"
+          name="Guardar"
+          id="GaradarBoton"
+          onclick="guardarPrograma()"
+        >
+          Guardar
+        </button>
+
+        <button
+          type="button"
+          name="Cargar"
+          id="CargarBoton"
+          onclick="cargarProgama()"
+        >
+          Cargar
+
+          <button
+          type="button"
+          name="dia/noche"
+          id="dia/noche"
+          onclick="diaNoche()"
+        >
+          Dia/noche
+        </button>
+      </div>
+      <div class="flex-container">
+        <div id="zonacajas">
+          <div class="caja" id="0" onclick="click_cliente('0')">
+            <p>CAJA1<br />cola de la caja :<span id="00"> </span><div id="000" class="cajaimg"></div></p>
+          </div>
+          <div class="caja" id="1" onclick="click_cliente('1')">
+            <p>CAJA2<br />cola de la caja :<span id="11"> </span><div id="111" class="cajaimg"></div></p>
+          </div>
+          <div class="caja" id="2" onclick="click_cliente('2')">
+            <p>CAJA3<br />cola de la caja :<span id="22"> </span><div id="222" class="cajaimg"></div></p>
+          </div>
+          <div class="caja" id="3" onclick="click_cliente('3')">
+            <p>CAJA4<br />cola de la caja :<span id="33"> </span><div id="333" class="cajaimg"></div></p>
+          </div>
+        </div>
+
+        <div>
+          <div id="zonaComando">
+            <h4>zona comado de jefes</h4>
+            <p>consola:</p>
+            <form method="POST" onsubmit="return consolaJefe(event)">
+              <input
+                type="text"
+                name="consola"
+                pattern="^caja[1-4]\s[+-][1-5]$"
+                id="comando"
+                required
+              />
+              <input type="submit" value="enviar comando" />
+            </form>
+            <p>rejistro de comandos:</p>
+            <div id="comandos"></div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </body>
+</html>
