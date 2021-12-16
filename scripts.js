@@ -112,17 +112,15 @@ function guardarPrograma() {
   localStorage.setItem("cajas", JSON.stringify(cajasArray));
 }
 function cargarProgama() {
-  if(localStorage.getItem("diaNoche")==null){
-    localStorage.setItem("diaNoche", "true");
-    document.getElementById("fondoTodo").classList.add("fondoDeTodo");
-  }
+  
   if(localStorage.getItem("diaNoche")=="true"){
-    localStorage.setItem("diaNoche", "false");
-  document.getElementById("fondoTodo").classList.add("fondoDeTodo2");
-  }else{
     localStorage.setItem("diaNoche", "true");
+  document.getElementById("fondoTodo").classList.add("fondoDeTodo2");
+  }else if (localStorage.getItem("diaNoche")=="false"){
+    localStorage.setItem("diaNoche", "false");
     document.getElementById("fondoTodo").classList.add("fondoDeTodo");
-  }
+  } 
+  
   cajasArray = JSON.parse(localStorage.getItem("cajas"));
   console.log(cajasArray);
 
