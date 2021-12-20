@@ -113,11 +113,11 @@ function guardarPrograma() {
 }
 function cargarProgama() {
   
-  if(localStorage.getItem("diaNoche")=="true"){
-    localStorage.setItem("diaNoche", "true");
-  document.getElementById("fondoTodo").classList.add("fondoDeTodo2");
-  }else if (localStorage.getItem("diaNoche")=="false"){
+  if(localStorage.getItem("diaNoche")=="false"){
     localStorage.setItem("diaNoche", "false");
+  document.getElementById("fondoTodo").classList.add("fondoDeTodo2");
+  }else if (localStorage.getItem("diaNoche")=="true"){
+    localStorage.setItem("diaNoche", "true");
     document.getElementById("fondoTodo").classList.add("fondoDeTodo");
   } 
   
